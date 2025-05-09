@@ -4,5 +4,10 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     css: ['~/assets/css/main.css'],
     srcDir: "src/",
-    modules: ['@nuxt/ui', '@nuxt/icon', '@nuxt/image'],
+    modules: ['@nuxt/ui', '@nuxt/icon', '@nuxt/image', '@nuxt/fonts'],
+    icon: {
+        serverBundle: {
+            collections: ['uil', 'mdi', 'lucide'],
+        }
+    }
 })

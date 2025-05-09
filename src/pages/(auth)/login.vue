@@ -27,8 +27,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-    <div class="p-20 rounded-lg border border-accented">
-        <p class="font-bold text-2xl mb-12">Sign In to you Account</p>
+    <div class="w-[378px]">
+        <p class="font-bold text-2xl mb-2 text-center">Sign In to your Account</p>
+        <p class="mb-12 text-center text-sm">Don&apos;t have an account?
+            <NuxtLink to="/register" class="text-primary hover:underline">Register</NuxtLink>
+            now.
+        </p>
         <div>
             <UForm :schema="schema" :state="state" class="space-y-6" @submit="onSubmit">
                 <!-- Email -->
@@ -39,7 +43,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
                 <UFormField label="Password" name="password" class="mb-8">
                     <UInput type="password" v-model="state.password" class="w-full"/>
                 </UFormField>
-                <UButton @submit="onSubmit" class="w-full grid place-content-center" label="Submit"/>
+                <UButton size="lg" type="submit" class="w-full grid place-content-center" label="Submit"/>
             </UForm>
         </div>
     </div>

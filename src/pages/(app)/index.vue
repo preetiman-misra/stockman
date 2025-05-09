@@ -2,7 +2,5 @@
 </script>
 
 <template>
-    <UButton loading-auto>
-        Button
-    </UButton>
+    Dashboard
 </template>
